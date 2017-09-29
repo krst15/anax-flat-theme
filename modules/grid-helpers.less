@@ -1,0 +1,12 @@
+.showGrid(@maxWidth: 950px, @gridImage) {
+    background: url("@{gridImage}") repeat-y fixed center center;
+    background-size: 100% auto;
+
+    @media (min-width: @maxWidth) {
+        background-size: @maxWidth auto;
+    }
+}
+
+.showTypo(@maxWidth: 950px, @typoImage) {
+background: url("@{typoImage}");
+}
