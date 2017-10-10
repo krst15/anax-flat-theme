@@ -1,19 +1,19 @@
-@import "grid-fluid-me.less";
-@import "typography.less";
-@import "grid-helpers.less";
+@import url(modules.less);
+
+
 @magicNumber: 24px;
 
 @columnWidth:   30;
 @gutterWidth:   10;
 @columns:       24;
 
-
-
-
 body {
     .font();
     background: url("../img/background/bgsoft.png");
     background-repeat: repeat;
+}
+.no-js {
+    display: none;
 }
 
 .outer-wrap-footer {
@@ -28,9 +28,16 @@ body {
     &.inner-wrap-header {
         @gridWidth: 100%;
         .grid(@gridWidth);
-
+    }
+    pre {
+        white-space: pre-wrap;       /* Since CSS 2.1 */
+        white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+        white-space: -pre-wrap;      /* Opera 4-6 */
+        white-space: -o-pre-wrap;    /* Opera 7 */
+        word-wrap: break-word;       /* Internet Explorer 5.5+ */
     }
 }
+
 
 .route-grid {
     .inner-wrap {
